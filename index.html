@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteMaker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1 style="padding: 0px 0px 0px 650px;">NoteMaker</h1>
+        <label class="switch">
+            <input type="checkbox" id="themeToggle">
+            <span class="slider round"></span>
+        </label>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Forum Threads -->
+        <div id="threads-container">
+            <!-- Threads will be dynamically added here using JavaScript -->
+        </div>
+
+        <!-- Create New Thread Form -->
+        <form id="new-thread-form">
+            <h2>Create Note</h2>
+            <input type="text" id="thread-title" placeholder="Note Title" required>
+            <textarea id="thread-content" placeholder="Note Content" required></textarea>
+            <button type="submit">Create Note</button>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; NoteMaker 2023. All rights reserved.</p>
+        <p>Created by T S Sainiranjan</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+/* CSS - styles.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f8f8f8;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+img {
+    max-width: 10%;
+    max-height: 10%;
+}
+
+body.dark-mode {
+    background-color: #1e1e1e;
+}
+
+
+body.dark-mode header {
+    background-color: #333;
+}
+
+body.dark-mode form h2 {
+    color: white;
+}
+
+body.dark-mode footer {
+    background-color: #333;
+}
+
+body.dark-mode button {
+    background-color: #444;
+}
+
+/* Toggle switch styles */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #444;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0059b3;
+    color: #f8f8f8;
+    padding: 1rem;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+main {
+    flex: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+#threads-container {
+    margin-bottom: 1rem;
+}
+
+.thread {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+textarea,
+input {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #0059b3;
+    color: #f8f8f8;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0066cc;
+}
+
+footer {
+    background-color: #0059b3;
+    color: #f8f8f8;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+
+/* Responsive Styles */
+
+/* Tablets and larger smartphones */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 0.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    main {
+        padding: 0.5rem;
+    }
+
+    .thread {
+        padding: 1rem;
+    }
+
+    textarea,
+    input {
+        padding: 0.7rem;
+    }
+
+    button {
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Smartphones */
+@media screen and (max-width: 576px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    header {
+        padding: 0.5rem;
+        flex-direction: column;
+    }
+
+    /* Adjust header elements for smaller screens */
+    .switch {
+        margin-right: 10px;
+    }
+
+    /* Reduce margins for thread elements */
+    .thread {
+        margin-bottom: 0.5rem;
+    }
+}
